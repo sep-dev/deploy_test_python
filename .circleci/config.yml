@@ -25,9 +25,9 @@ jobs:
           command: |
             ssh-keyscan ${HOST_NAME} >> ~/.ssh/known_hosts
       - run:
-        name: Install rsync
-        command: |
-          sudo apt install -y rsync
+          name: Install rsync
+          command: |
+            sudo apt install -y rsync
  
       - deploy:
           name: Start master deploy
