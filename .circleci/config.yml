@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Install rsync
           command: |
-            sudo apt install -y rsync
+            sudo apt update && sudo apt install -y rsync
  
       - deploy:
           name: Start master deploy
