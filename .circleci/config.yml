@@ -1,6 +1,7 @@
 # Environment variables
 # - HOST_NAME
 # - USER_NAME
+# - FINGER_PRINT
  
 version: 2
 jobs:
@@ -17,7 +18,7 @@ jobs:
  
       - add_ssh_keys:
           fingerprints:
-            - "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+            - "${FINGER_PRINT}"
  
       - run:
           name: Start ssh-keyscan
