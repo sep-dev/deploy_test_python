@@ -33,6 +33,6 @@ jobs:
           name: Start master deploy
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                rsync -rlOtcv --delete --exclude='.git' --exclude='.circleci' ./ ${USER_NAME}@${HOST_NAME}:/var/www/bottler-ai/
+                rsync -rlOtcv --delete --exclude='.git' --exclude='.circleci' ./ ${USER_NAME}@${HOST_NAME}:/var/www/deploy_test_python/
             fi
 
